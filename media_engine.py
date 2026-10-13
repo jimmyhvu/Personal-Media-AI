@@ -5,7 +5,9 @@ import json
 import math
 import os
 
-load_dotenv()
+from pathlib import Path
+
+load_dotenv(dotenv_path=Path(__file__).resolve().parent / ".env")
 
 client = OpenAI()
 
@@ -92,6 +94,9 @@ def cosine_similarity(a, b):
 
 
 def load_profile():
+    if not os.path.exists(PROFILE_FILE):
+        return "No taste profile has been generated yet. The user has not provided any media reviews or preferences."
+
     with open(PROFILE_FILE, "r", encoding="utf-8") as f:
         data = json.load(f)
 
