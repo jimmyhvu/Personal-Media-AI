@@ -1,0 +1,33 @@
+# API credentials and secrets
+.env
+.env.*
+!.env.example
+*key.txt
+*token*.json
+*credentials*.json
+*secret*.json
+
+# Personal media data
+*.jsonl
+*.zip
+conversation_profile.json
+cross_media_profile.json
+manual_taste_signals.json
+media_chats.json
+media_chat_notes.json
+media_visuals.json
+review_drafts.json
+spotify_*.json
+steam_*.json
+watchlist.json
+saved_jobs.csv
+
+# Python generated files
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Backups and temporary files
+*.bak
+*.log
